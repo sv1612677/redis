@@ -13,8 +13,9 @@
 - [redisson-spring-boot-starter](#redisson-spring-boot-starter)
   - [Dependency](#dependency-1)
   - [Setting](#setting)
-  - [Redis cluster](#redis-cluster)
-  - [Redis Sentinel](#redis-sentinel)
+  - [DEMO](#demo)
+- [Redis cluster](#redis-cluster)
+- [Redis Sentinel](#redis-sentinel)
 
 ## Sring boot starter data redis
 
@@ -213,7 +214,11 @@ spring.redis.sentinel.nodes=
 
 Mặc định spring boot sẽ cấu hình mặc định là localhost và port là 6379.
 
-### Redis cluster
+### DEMO 
+
+demo về phần này em giải quyết bài tập count ở tuần trước nhưng sử dụng redission client được cung cấp bởi spring, và đã refactor code lại theo chuẩn như anh đã review trước đó, cụ thể nằm trong folder `redission-springboot-starter`.
+
+## Redis cluster
 
 là một data sharding cho việc automatic management, handling failover and replication.
 
@@ -221,7 +226,7 @@ Với redis cluster thì dữ liệu sẽ được chia ra nhiều node, mỗi n
 
 Ta không cần cấu hình việc qủan lí lúc master fail khi sử dụng cluster.
 
-### Redis Sentinel
+## Redis Sentinel
 
 Redis sentinel cung cấp một giải pháp High Available cho cụm triển khai Redis. Nghĩa là, khi có một hoặc một số Redis instance down, thì cụm Redis của bạn vẫn hoạt động tốt. bằng cách
 - chọn một slave đang chaỵ, và chuyển nó lên làm master
